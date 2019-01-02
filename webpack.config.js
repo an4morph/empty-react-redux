@@ -8,13 +8,13 @@ module.exports = {
   mode: dev ? 'development' : 'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'site/dist'),
+    path: path.resolve(__dirname, 'public/dist'),
     filename: 'bundle.js',
     publicPath: 'dist/',
   },
   devServer: {
     overlay: true,
-    contentBase: path.join(__dirname, '/site'),
+    contentBase: path.join(__dirname, '/public'),
     historyApiFallback: true,
     port: 3333,
     disableHostCheck: true,

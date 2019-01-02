@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react", "jest"
   ],
   "env": {
     "node": true,
@@ -24,7 +24,8 @@
   "extends" : [
     "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:jest/recommended"
   ],
   "rules" : {
     "no-unused-expressions": ["error", {"allowTaggedTemplates": true}],
@@ -36,6 +37,7 @@
     "no-multiple-empty-lines": ["error"],
     "no-new-symbol": "error",
     "no-trailing-spaces": ["error"],
+    "no-case-declarations": 0,
     "no-undef": ["error"],
     "no-unused-vars": ["error"],
     "object-curly-spacing": ["error", "always"],
@@ -61,7 +63,9 @@
         "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
     "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
     "jsx-a11y/no-static-element-interactions": 0,
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": 1
   }
 }

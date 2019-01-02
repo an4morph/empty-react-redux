@@ -13,3 +13,4 @@ For build run
 ```
 npm run build
 ```
+to analize your build size - remove `{ analyzerMode: 'disabled' }` from your webpack config, restart project and go to 8888 port
