@@ -1,6 +1,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import Button from '../../ui/Button'
+import Input from '../../ui/Input'
 import Icon from './icon.svg'
 
 
@@ -9,6 +10,7 @@ const HomePage = () => (
       HomePage
     <Icon color="red" />
     <Button>Button</Button>
+    <Input value="lalala" />
   </div>
 )
 
