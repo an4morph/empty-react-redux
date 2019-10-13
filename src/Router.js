@@ -4,7 +4,7 @@ import {
   Router as BrowserRouter, Route, Switch,
 } from 'react-router-dom'
 
-import HomePage from './containers/HomePage'
+import HomePage from './pages/Home'
 
 
 const Router = ({ history }) => (

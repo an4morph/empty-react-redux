@@ -1,7 +1,8 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
+const PORT = 3333
 const dev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
     overlay: true,
     contentBase: path.join(__dirname, '/public'),
     historyApiFallback: true,
-    port: 3333,
+    port: PORT,
     disableHostCheck: true,
   },
   module: {
@@ -31,14 +32,6 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-        ],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
         ],
       },
       {
